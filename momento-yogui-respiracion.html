@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respiración Consciente — Momento Yogui</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #3d7a8a;
+    --azul-oscuro: #2a5a6a;
+    --azul-claro: #6aaab8;
+    --azul-palido: #c8dfe5;
+    --azul-niebla: #e8f3f6;
+    --blanco: #fafcfd;
+    --texto: #1a3540;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--blanco);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Fondo con figuras de yoga (mismo SVG del branding) */
+  .yoga-bg {
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc5MDAnIGhlaWdodD0nNjAwJyB2aWV3Qm94PScwIDAgOTAwIDYwMCc+CiAgPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoODAsODApJyBvcGFjaXR5PScwLjEzJyBmaWxsPScjM2Q3YThhJz4KICAgIDxjaXJjbGUgY3g9JzMwJyBjeT0nMTInIHI9JzEwJy8+CiAgICA8bGluZSB4MT0nMzAnIHkxPScyMicgeDI9JzMwJyB5Mj0nNzAnIHN0cm9rZT0nIzNkN2E4YScgc3Ryb2tlLXdpZHRoPSczJy8+CiAgICA8bGluZSB4MT0nMzAnIHkxPSc0MCcgeDI9JzEwJyB5Mj0nNTUnIHN0cm9rZT0nIzNkN2E4YScgc3Ryb2tlLXdpZHRoPScyLjUnLz4KICAgIDxsaW5lIHgxPSczMCcgeTE9JzQwJyB4Mj0nNTAnIHkyPSczMCcgc3Ryb2tlPScjM2Q3YThhJyBzdHJva2Utd2lkdGg9JzIuNScvPgogICAgPGxpbmUgeDE9JzMwJyB5MT0nNzAnIHgyPSczMCcgeTI9JzExMCcgc3Ryb2tlPScjM2Q3YThhJyBzdHJva2Utd2lkdGg9JzMnLz4KICAgIDxsaW5lIHgxPSczMCcgeTE9Jzg1JyB4Mj0nNDgnIHkyPScxMDUnIHN0cm9rZT0nIzNkN2E4YScgc3Ryb2tlLXdpZHRoPScyLjUnLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMzAwLDYwKScgb3BhY2l0eT0nMC4xMCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjM2Q3YThhJyBzdHJva2Utd2lkdGg9JzIuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJz4KICAgIDxjaXJjbGUgY3g9JzMwJyBjeT0nMTInIHI9JzknIGZpbGw9JyMzZDdhOGEnIHN0cm9rZT0nbm9uZScvPgogICAgPGxpbmUgeDE9JzMwJyB5MT0nMjEnIHgyPSczMCcgeTI9JzU4Jy8+CiAgICA8bGluZSB4MT0nMTAnIHkxPSczMicgeDI9JzUwJyB5Mj0nMzInLz4KICAgIDxsaW5lIHgxPSczMCcgeTE9JzU4JyB4Mj0nMTAnIHkyPSc5NScvPgogICAgPGxpbmUgeDE9JzMwJyB5MT0nNTgnIHgyPSc1MicgeTI9Jzg1Jy8+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDYwMCw4MCknIG9wYWNpdHk9JzAuMDknIGZpbGw9J25vbmUnIHN0cm9rZT0nIzNkN2E4YScgc3Ryb2tlLXdpZHRoPScyLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCc+CiAgICA8Y2lyY2xlIGN4PSczNScgY3k9JzEyJyByPSc5JyBmaWxsPScjM2Q3YThhJyBzdHJva2U9J25vbmUnLz4KICAgIDxwYXRoIGQ9J00zNSwyMSBRMzUsNTAgMzUsNTgnLz4KICAgIDxwYXRoIGQ9J00zNSw1MCBRMjAsNDggMTAsNTggUTIyLDY1IDM1LDYwIFE0OCw2NSA2MCw1OCBRNTAsNDggMzUsNTAnLz4KICAgIDxsaW5lIHgxPSczNScgeTE9JzMwJyB4Mj0nMTUnIHkyPSc0MicvPgogICAgPGxpbmUgeDE9JzM1JyB5MT0nMzAnIHgyPSc1NScgeTI9JzQyJy8+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDE1MCwzMjApJyBvcGFjaXR5PScwLjA5JyBmaWxsPSdub25lJyBzdHJva2U9JyMzZDdhOGEnIHN0cm9rZS13aWR0aD0nMi41JyBzdHJva2UtbGluZWNhcD0ncm91bmQnPgogICAgPGNpcmNsZSBjeD0nODAnIGN5PScyMicgcj0nOScgZmlsbD0nIzNkN2E4YScgc3Ryb2tlPSdub25lJy8+CiAgICA8cGF0aCBkPSdNODAsMzEgUTc1LDUwIDYwLDU4IFEzMCw2MiAxMCw2MCcvPgogICAgPGxpbmUgeDE9JzY1JyB5MT0nNDInIHgyPSc4MCcgeTI9JzU1Jy8+CiAgICA8bGluZSB4MT0nNjUnIHkxPSc0MicgeDI9JzUwJyB5Mj0nNTUnLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoNTAwLDMwMCknIG9wYWNpdHk9JzAuMTAnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzNkN2E4YScgc3Ryb2tlLXdpZHRoPScyLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCc+CiAgICA8Y2lyY2xlIGN4PSczNScgY3k9JzEyJyByPSc5JyBmaWxsPScjM2Q3YThhJyBzdHJva2U9J25vbmUnLz4KICAgIDxsaW5lIHgxPSczNScgeTE9JzIxJyB4Mj0nMzUnIHkyPSc1NScvPgogICAgPGxpbmUgeDE9JzUnIHkxPSczOCcgeDI9JzY1JyB5Mj0nMzgnLz4KICAgIDxsaW5lIHgxPSczNScgeTE9JzU1JyB4Mj0nMTAnIHkyPSc5MCcvPgogICAgPGxpbmUgeDE9JzM1JyB5MT0nNTUnIHgyPSc2MCcgeTI9JzkwJy8+CiAgPC9nPgo8L3N2Zz4=");
+    background-repeat: repeat;
+    background-size: 900px 600px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  /* Header */
+  .header .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 6vw, 36px);
+    font-weight: 300;
+    color: var(--azul-oscuro);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+  .header h1 em {
+    font-style: italic;
+    color: var(--azul);
+  }
+  .header p {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--azul-claro);
+    letter-spacing: 0.02em;
+  }
+
+  /* CÍRCULO PRINCIPAL */
+  .breath-arena {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Anillos suaves */
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--azul-palido);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .ring-1 { width: 260px; height: 260px; opacity: 0.4; animation: pulse-ring 5s ease-in-out infinite; }
+  .ring-2 { width: 220px; height: 220px; opacity: 0.5; animation: pulse-ring 5s ease-in-out infinite 1s; }
+  .ring-3 { width: 180px; height: 180px; opacity: 0.6; animation: pulse-ring 5s ease-in-out infinite 2s; }
+
+  @keyframes pulse-ring {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+
+  /* Círculo respirador */
+  .breath-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: var(--blanco);
+    border: 1.5px solid var(--azul-palido);
+    box-shadow: 0 4px 24px rgba(61,122,138,0.12), 0 0 0 8px rgba(200,223,229,0.2);
+    transition: transform 0.1s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+  }
+
+  .breath-circle.idle {
+    animation: idle-breathe 4s ease-in-out infinite;
+  }
+  @keyframes idle-breathe {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 24px rgba(61,122,138,0.12), 0 0 0 8px rgba(200,223,229,0.2); }
+    50% { transform: scale(1.06); box-shadow: 0 8px 32px rgba(61,122,138,0.18), 0 0 0 14px rgba(200,223,229,0.3); }
+  }
+
+  .breath-circle.inhale {
+    animation: breathe-in var(--dur, 4s) cubic-bezier(0.4, 0, 0.6, 1) forwards;
+    border-color: var(--azul);
+    box-shadow: 0 8px 40px rgba(61,122,138,0.2), 0 0 0 16px rgba(200,223,229,0.35);
+  }
+  .breath-circle.hold {
+    border-color: var(--azul-claro);
+    box-shadow: 0 6px 32px rgba(61,122,138,0.15), 0 0 0 12px rgba(200,223,229,0.25);
+  }
+  .breath-circle.exhale {
+    animation: breathe-out var(--dur, 4s) cubic-bezier(0.4, 0, 0.6, 1) forwards;
+    border-color: var(--azul-palido);
+    box-shadow: 0 4px 20px rgba(61,122,138,0.1), 0 0 0 6px rgba(200,223,229,0.15);
+  }
+
+  @keyframes breathe-in {
+    from { transform: scale(1); }
+    to { transform: scale(1.5); }
+  }
+  @keyframes breathe-out {
+    from { transform: scale(1.5); }
+    to { transform: scale(1); }
+  }
+
+  .phase-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    font-weight: 400;
+  }
+  .phase-timer {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--azul-oscuro);
+    line-height: 1;
+  }
+
+  /* HUD */
+  .hud {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .hud-stat { text-align: center; }
+  .hud-stat .val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--azul);
+    line-height: 1;
+  }
+  .hud-stat .lbl {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-top: 4px;
+    font-weight: 300;
+  }
+  .hud-sep {
+    width: 1px;
+    height: 32px;
+    background: var(--azul-palido);
+  }
+
+  /* Barra de progreso */
+  .progress-wrap {
+    width: 240px;
+  }
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-bottom: 6px;
+    font-weight: 300;
+  }
+  .progress-track {
+    width: 100%;
+    height: 2px;
+    background: var(--azul-niebla);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--azul-palido), var(--azul));
+    border-radius: 1px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+
+  /* Botón */
+  .btn-start {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    background: var(--azul);
+    border: none;
+    padding: 14px 44px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    box-shadow: 0 4px 16px rgba(61,122,138,0.25);
+  }
+  .btn-start:hover {
+    background: var(--azul-oscuro);
+    box-shadow: 0 6px 20px rgba(42,90,106,0.3);
+  }
+  .btn-start:active { transform: scale(0.98); }
+
+  /* Mensaje final */
+  .complete-msg {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .complete-msg.visible { display: flex; }
+  .complete-msg .big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--azul-oscuro);
+    letter-spacing: 0.04em;
+  }
+  .complete-msg .sub {
+    font-size: 11px;
+    color: var(--azul-claro);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+  }
+
+  /* Logo */
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--azul-oscuro);
+  }
+  .logo em { font-style: italic; color: var(--azul); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="yoga-bg"></div>
+
+<div class="container">
+
+  <div class="logo">momento <em>yogui</em></div>
+
+  <div class="header">
+    <div class="eyebrow">Práctica de bienestar</div>
+    <h1>Respiración <em>consciente</em></h1>
+    <p>Sincronizá tu respiración y encontrá tu centro</p>
+  </div>
+
+  <div class="breath-arena">
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+    <div class="breath-circle idle" id="circle">
+      <span class="phase-label" id="phaseLabel">listo</span>
+      <span class="phase-timer" id="phaseTimer">—</span>
+    </div>
+  </div>
+
+  <div class="hud">
+    <div class="hud-stat">
+      <div class="val" id="cycleCount">0</div>
+      <div class="lbl">Ciclos</div>
+    </div>
+    <div class="hud-sep"></div>
+    <div class="hud-stat">
+      <div class="val" id="totalTime">0s</div>
+      <div class="lbl">Tiempo</div>
+    </div>
+    <div class="hud-sep"></div>
+    <div class="hud-stat">
+      <div class="val" id="remaining">5</div>
+      <div class="lbl">Restantes</div>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-labels">
+      <span>Ciclo actual</span>
+      <span id="phaseNameBar">—</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <button class="btn-start" id="btnStart" onclick="startSession()">Comenzar</button>
+
+  <div class="complete-msg" id="completeMsg">
+    <div class="big">Práctica completada ✨</div>
+    <div class="sub">5 ciclos · Sistema en equilibrio</div>
+  </div>
+
+</div>
+
+<script>
+  const TOTAL = 5;
+  const PHASES = [
+    { name: 'Inhalá',  label: 'inhalá',   dur: 4, cls: 'inhale', bar: 0 },
+    { name: 'Sostené', label: 'sostené',  dur: 4, cls: 'hold',   bar: 33 },
+    { name: 'Exhalá',  label: 'exhalá',   dur: 4, cls: 'exhale', bar: 66 },
+    { name: 'Pausa',   label: 'pausa',    dur: 2, cls: 'hold',   bar: 88 },
+  ];
+
+  let running = false, cyclesDone = 0, totalSec = 0;
+  let totalInterval = null, phaseTimeout = null, tickInterval = null;
+
+  const circle = document.getElementById('circle');
+  const phaseLabel = document.getElementById('phaseLabel');
+  const phaseTimer = document.getElementById('phaseTimer');
+  const cycleCount = document.getElementById('cycleCount');
+  const totalTime = document.getElementById('totalTime');
+  const remaining = document.getElementById('remaining');
+  const fill = document.getElementById('progressFill');
+  const barName = document.getElementById('phaseNameBar');
+  const btn = document.getElementById('btnStart');
+  const msg = document.getElementById('completeMsg');
+
+  function startSession() {
+    if (running) return;
+    running = true; cyclesDone = 0; totalSec = 0;
+    btn.style.display = 'none';
+    msg.classList.remove('visible');
+    remaining.textContent = TOTAL;
+
+    totalInterval = setInterval(() => {
+      totalSec++;
+      totalTime.textContent = totalSec + 's';
+    }, 1000);
+
+    runCycle();
+  }
+
+  function runCycle() {
+    if (cyclesDone >= TOTAL) { endSession(); return; }
+    runPhase(0, () => {
+      cyclesDone++;
+      cycleCount.textContent = cyclesDone;
+      remaining.textContent = Math.max(0, TOTAL - cyclesDone) || '✓';
+      runCycle();
+    });
+  }
+
+  function runPhase(idx, done) {
+    if (idx >= PHASES.length) { done(); return; }
+    const ph = PHASES[idx];
+
+    circle.className = 'breath-circle ' + ph.cls;
+    circle.style.setProperty('--dur', ph.dur + 's');
+    phaseLabel.textContent = ph.label;
+    barName.textContent = ph.name;
+    fill.style.width = ph.bar + '%';
+
+    let rem = ph.dur;
+    phaseTimer.textContent = rem;
+    clearInterval(tickInterval);
+    tickInterval = setInterval(() => {
+      rem--;
+      phaseTimer.textContent = rem > 0 ? rem : '';
+      const next = PHASES[idx + 1]?.bar ?? 100;
+      fill.style.width = (ph.bar + (next - ph.bar) * ((ph.dur - rem) / ph.dur)) + '%';
+    }, 1000);
+
+    clearTimeout(phaseTimeout);
+    phaseTimeout = setTimeout(() => {
+      clearInterval(tickInterval);
+      runPhase(idx + 1, done);
+    }, ph.dur * 1000);
+  }
+
+  function endSession() {
+    running = false;
+    clearInterval(totalInterval); clearInterval(tickInterval); clearTimeout(phaseTimeout);
+
+    circle.className = 'breath-circle idle';
+    phaseLabel.textContent = 'equilibrio';
+    phaseTimer.textContent = '✓';
+    fill.style.width = '100%';
+    barName.textContent = 'Completo';
+
+    msg.classList.add('visible');
+    btn.textContent = 'Nueva práctica';
+    btn.style.display = '';
+    btn.onclick = () => {
+      msg.classList.remove('visible');
+      cycleCount.textContent = '0';
+      totalTime.textContent = '0s';
+      remaining.textContent = TOTAL;
+      fill.style.width = '0%';
+      phaseLabel.textContent = 'listo';
+      phaseTimer.textContent = '—';
+      barName.textContent = '—';
+      circle.className = 'breath-circle idle';
+      btn.textContent = 'Comenzar';
+      btn.onclick = startSession;
+    };
+  }
+</script>
+</body>
+</html>
